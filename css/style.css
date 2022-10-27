@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 2rem 0 10rem 3rem
+}
+
+
+ol {
+    width: 40%;
+    list-style-position: inside;
+
+    
+}
+
+.controls {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+}
+
+input {
+    width: max-content;
+}
+
+button {
+    width: max-content;
+    margin-bottom: 1rem;
+    align-self: center;
+    margin-top: 1rem;
+}
+
+.message {
+    
+    text-align: center;
+}
