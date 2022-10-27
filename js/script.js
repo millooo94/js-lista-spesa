@@ -1,16 +1,7 @@
 const arrGroceryList = [
-    // 'pane',
-    // 'pasta',
-    // 'olio',
-    // 'burro',
-    // 'farina',
-    // 'lievito',
-    // 'filetto di manzo',
-    // 'limoni',
-    // 'petto di pollo',
-    // 'passata di pomodoro',
-    // 'melanzane',
-    // 'peperoni',
+    'pane',
+    'pasta',
+    'olio',
 ]
 
 
@@ -23,7 +14,7 @@ const text = document.querySelector('.text');
 let i = 0
 
 
-while (i < arrGroceryList.length && arrGroceryList.length <= 20) {
+while (i < arrGroceryList.length) {
 
     groceryList.innerHTML += `<li>${arrGroceryList[i]}</li>`;
 
@@ -38,6 +29,7 @@ form.addEventListener('submit', function(event) {
 
     if (arrGroceryList.length >= 20) {
         message.innerHTML = 'hai raggiunto il limite di articoli'
+        text.value = '' 
 
     } else if (text.value == '') {
         message.innerHTML = 'inserisci un articolo'
