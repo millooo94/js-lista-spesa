@@ -1,7 +1,7 @@
 const arrGroceryList = [
-    'pane',
-    'pasta',
-    'olio',
+    'Pane',
+    'Pasta',
+    'Olio',
 ]
 
 
@@ -23,21 +23,28 @@ while (i < arrGroceryList.length) {
 }
 
 
+
 form.addEventListener('submit', function(event) {
 
     event.preventDefault()
 
-    if (arrGroceryList.length >= 20) {
-        message.innerHTML = 'hai raggiunto il limite di articoli'
-        text.value = '' 
+    if (arrGroceryList.length >= 10) {
+        message.innerHTML = 'MAX LIMIT'
+        text.value = ''
+        message.classList.add('negative')
+        message.classList.remove('empty')
 
     } else if (text.value == '') {
-        message.innerHTML = 'inserisci un articolo'
+        message.innerHTML = 'ADD AN ITEM'
+        message.classList.add('empty')
+        message.classList.remove('negative')
     } else {
         arrGroceryList.push(text.value);
         groceryList.innerHTML += `<li>${text.value}</li>`
         message.innerHTML = ''
         text.value = '' 
+        message.classList.remove('empty')
+        message.classList.remove('negative')
     }
 });
 
